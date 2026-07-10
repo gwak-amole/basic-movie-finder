@@ -57,6 +57,12 @@ input[type=text] {
     font-family: 'Courier New', Courier, monospace;
     border-radius: 8px;
     padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
 }
 
 .nav-links {
