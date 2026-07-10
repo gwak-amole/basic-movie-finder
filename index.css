@@ -1,0 +1,9 @@
+.movie-div {
+    text-align: center;
+    border: 4px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+}
+.movie_img {
+    max-width:200px;
+}
