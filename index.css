@@ -97,3 +97,11 @@ input[type=text] {
     border-radius: 15px;
     padding: 20px;
 }
+
+#movie-show-search {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+
+}
