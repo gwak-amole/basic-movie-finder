@@ -25,7 +25,7 @@ const renderMovies = (array) => {
 const getMovieData = async (event) => {
     if (event.key === "Enter" || event.type === "click") {
         const search_content = search_box.value;
-        const url = `http://www.omdbapi.com/?apikey=f39e4e1b&s=${search_content}`;
+        const url = `https://www.omdbapi.com/?apikey=f39e4e1b&s=${search_content}`;
         try {
             const response = await fetch(url);
             if (!response.ok) {
