@@ -1,6 +1,8 @@
 const search_box = document.getElementById("search");
 const search_button = document.getElementById("search-button");
+const light_button = document.getElementById("light-mode")
 const div_movies = document.getElementById("movie-show");
+const hr = document.getElementById("hr");
 
 const renderMovie = (object) => {
     div_movies.innerHTML = "";
@@ -36,4 +38,13 @@ const getMovieData = async () => {
         console.error(error.message);
     }
 }
+
+const light = () => {
+    document.body.classList.toggle("light");
+    search_box.classList.toggle("light");
+    div_movies.classList.toggle("light");
+    hr.classList.toggle("light")
+}
+
 search_button.addEventListener("click", getMovieData);
+light_button.addEventListener("click", light)
