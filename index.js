@@ -22,20 +22,22 @@ const renderMovie = (object) => {
 }
 
 
-const getMovieData = async () => {
-    const search_content = search_box.value;
-    const url = `http://www.omdbapi.com/?apikey=f39e4e1b&t=${search_content}`;
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Response: ${response.status}`);
-        }
-        const result = await response.json();
-        console.log(result);
-        renderMovie(result);
+const getMovieData = async (event) => {
+    if (event.key === "Enter" || event.type === "click") {
+        const search_content = search_box.value;
+        const url = `http://www.omdbapi.com/?apikey=f39e4e1b&t=${search_content}`;
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Response: ${response.status}`);
+            }
+            const result = await response.json();
+            console.log(result);
+            renderMovie(result);
 
-    } catch (error) {
-        console.error(error.message);
+        } catch (error) {
+            console.error(error.message);
+    }
     }
 }
 
@@ -46,5 +48,6 @@ const light = () => {
     hr.classList.toggle("light")
 }
 
-search_button.addEventListener("click", getMovieData);
+search_box.addEventListener("keydown", (event) => getMovieData(event))
+search_button.addEventListener("click", (event)=> getMovieData(event));
 light_button.addEventListener("click", light)
