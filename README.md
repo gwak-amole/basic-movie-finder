@@ -1,5 +1,5 @@
 **Basic Movie Finder** 🎬🎥🎞️🍿 <br>
-I made a basic movie finder, so you type in the name of a movie and the title, date of release, and a corresponding poster appears.
+I made a basic movie finder, so you type in the name of a movie and the title, date of release, and a corresponding poster appears. You can also search with a keyword to get 10 related movies back in the same format in a grid.
 <br>
 I used JS for this. I learned: 📚🤓
 <ul>
