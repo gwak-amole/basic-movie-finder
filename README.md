@@ -6,7 +6,7 @@ This is a basic movie searcher made with simple HTML, CSS, and JS. You type in t
   <li>Search Movie by Title</li>
   <li>Search Movie by Keyword (10 matches)</li>
 </ul>
-Skills learned: 📚🤓
+## Skills learned: 📚🤓
 <ul>
   <li>async/await functions</li>
   <li>used fetch API for the first time</li>
